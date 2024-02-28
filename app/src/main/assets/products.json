@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Product 1",
+    "shop": "Shop 1",
+    "image": "product1_image",
+    "price": 19.99
+  },
+  {
+    "name": "Product 2",
+    "shop": "Shop 2",
+    "image": "product2_image",
+    "price": 25.00
+  },
+  {
+    "name": "Product 3",
+    "shop": "Shop 3",
+    "image": "product3_image",
+    "price": 15.99
+  }
+]

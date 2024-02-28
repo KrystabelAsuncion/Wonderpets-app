@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rotty"
+    tools:context=".activity.Register">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:maxWidth="1000dp"
+        android:maxHeight="1000dp"
+        android:src="@drawable/rotty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:background="@drawable/roundrectcon"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_info"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="350dp"
+            android:layout_height="220dp">
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:background="@color/colorB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etFname"
+                    android:paddingStart="15dp"
+                    android:hint="Fullname"
+                    android:maxLines="1"
+                    android:elevation="5dp"
+                    android:background="@drawable/et_custom"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"/>
+
+                <EditText
+                    android:id="@+id/etUsn"
+                    android:paddingStart="15dp"
+                    android:hint="Username"
+                    android:maxLines="1"
+                    android:elevation="5dp"
+                    android:background="@drawable/et_custom"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/etFname"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"/>
+
+                <EditText
+                    android:id="@+id/etPw"
+                    android:paddingStart="15dp"
+                    android:hint="Password"
+                    android:maxLines="1"
+                    android:elevation="5dp"
+                    android:inputType="textPassword"
+                    android:background="@drawable/et_custom"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/etUsn"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create"
+            android:textSize="17sp"
+            android:text="Create Account"
+            android:background="@drawable/btn_custom_a"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cv_info"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_create"
+            android:orientation="horizontal"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Already have an Account?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_clickLog"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:text="Log in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                app:navigationIcon="@drawable/baseline_home_24"
+                app:title="Home"
+                android:background="@color/colorB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ScrollView
+        android:id="@+id/dashboard_scroll"
+        android:scrollbars="none"
+        android:layout_marginTop="60dp"
+        android:contentDescription="scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.google.android.material.search.SearchBar
+                    style="@style/Widget.Material3.MaterialTimePicker.Display.TextInputLayout"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/colorslight"
+                    android:elevation="5dp">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:backgroundTint="@color/white"
+                        android:elevation="5dp"
+                        app:iconifiedByDefault="false"
+                        app:queryHint="Search" />
+                </com.google.android.material.search.SearchBar>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/categories_container"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <HorizontalScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/cats_btn"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/CatsImgBtn"
+                                android:src="@drawable/baseline_pets_24"
+                                android:background="@drawable/circle_btn"
+                                android:layout_gravity="center"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+
+                            <TextView
+                                android:text="For\nCats"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dogs_btn"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:src="@drawable/baseline_person_24"
+                                android:background="@drawable/circle_btn"
+                                android:layout_gravity="center"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+
+                            <TextView
+                                android:text="For\nDogs"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fishes_btn"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:src="@drawable/baseline_person_24"
+                                android:background="@drawable/circle_btn"
+                                android:layout_gravity="center"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+
+                            <TextView
+                                android:text="For\nFishes"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/smallpets_btn"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:src="@drawable/baseline_person_24"
+                                android:background="@drawable/circle_btn"
+                                android:layout_gravity="center"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+
+                            <TextView
+                                android:text="Small\nPets"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/colorB"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="New Arrivals"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/viewAll_0"
+                        android:text="View all"
+                        android:textSize="15sp"
+                        android:layout_gravity="center_vertical"
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_marginStart="190dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_arrivals"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/colorB"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Customer Favorites"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/viewAll_1"
+                        android:text="View all"
+                        android:textSize="15sp"
+                        android:layout_gravity="center_vertical"
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_marginStart="128dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_favorites"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

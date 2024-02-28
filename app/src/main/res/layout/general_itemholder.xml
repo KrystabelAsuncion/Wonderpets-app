@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="175dp"
+    app:cardElevation="10dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp"
+    android:background="@android:color/transparent"
+    android:layout_height="260dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/gen_prodimg"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"/>
+
+            <TextView
+                android:id="@+id/gen_name"
+                android:layout_marginStart="5dp"
+                android:text="Product Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/gen_prodimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/gen_shop"
+                android:text="Shop"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/gen_name"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/gen_price"
+                android:text="P0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp"
+                android:layout_toEndOf="@id/gen_shop"
+                android:layout_below="@+id/gen_name"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

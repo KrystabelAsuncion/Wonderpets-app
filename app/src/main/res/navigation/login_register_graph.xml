@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_graph"
+    app:startDestination="@id/accountOptions">
+
+    <activity
+        android:id="@+id/accountOptions"
+        android:name="com.eightgroupdev.finalwp.activity.AccountOptions"
+        android:label="activity_account_options"
+        tools:layout="@layout/activity_account_options" />
+    <activity
+        android:id="@+id/logIn"
+        android:name="com.eightgroupdev.finalwp.activity.LogIn"
+        android:label="activity_log_in"
+        tools:layout="@layout/activity_log_in" />
+    <activity
+        android:id="@+id/register"
+        android:name="com.eightgroupdev.finalwp.activity.Register"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <activity
+        android:id="@+id/resetPW"
+        android:name="com.eightgroupdev.finalwp.activity.ResetPW"
+        android:label="ResetPW" />
+    <action
+        android:id="@+id/accountOptions4"
+        app:destination="@id/logIn"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <action
+        android:id="@+id/accountOptions5"
+        app:destination="@id/register"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <action
+        android:id="@+id/logIn3"
+        app:destination="@id/resetPW"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+</navigation>
